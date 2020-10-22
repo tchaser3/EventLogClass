@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{92D9BDB1-081D-43D4-AD46-AF4A3860B1BF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NewEventLogDLL</RootNamespace>
+    <AssemblyName>NewEventLogDLL</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EventLogClass.cs" />
+    <Compile Include="EventLogDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EventLogDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindEventLogByDateRangeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindEventLogByDateRangeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindServerEventLogByNoteKeywordDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindServerEventLogByNoteKeywordDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindServerEventLogByTransactionDateDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindServerEventLogByTransactionDateDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertEventLogEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertEventLogEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertServerEventLogEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertServerEventLogEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OldEventLogDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OldEventLogDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ServerEventLogDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ServerEventLogDataSet.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="EventLogDataSet.xsc">
+      <DependentUpon>EventLogDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="EventLogDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EventLogDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EventLogDataSet.xss">
+      <DependentUpon>EventLogDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindEventLogByDateRangeDataSet.xsc">
+      <DependentUpon>FindEventLogByDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindEventLogByDateRangeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindEventLogByDateRangeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindEventLogByDateRangeDataSet.xss">
+      <DependentUpon>FindEventLogByDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindServerEventLogByNoteKeywordDataSet.xsc">
+      <DependentUpon>FindServerEventLogByNoteKeywordDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindServerEventLogByNoteKeywordDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindServerEventLogByNoteKeywordDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindServerEventLogByNoteKeywordDataSet.xss">
+      <DependentUpon>FindServerEventLogByNoteKeywordDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindServerEventLogByTransactionDateDataSet.xsc">
+      <DependentUpon>FindServerEventLogByTransactionDateDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindServerEventLogByTransactionDateDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindServerEventLogByTransactionDateDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindServerEventLogByTransactionDateDataSet.xss">
+      <DependentUpon>FindServerEventLogByTransactionDateDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InsertEventLogEntry.xsc">
+      <DependentUpon>InsertEventLogEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertEventLogEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertEventLogEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertEventLogEntry.xss">
+      <DependentUpon>InsertEventLogEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertServerEventLogEntry.xsc">
+      <DependentUpon>InsertServerEventLogEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertServerEventLogEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertServerEventLogEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertServerEventLogEntry.xss">
+      <DependentUpon>InsertServerEventLogEntry.xsd</DependentUpon>
+    </None>
+    <None Include="OldEventLogDataSet.xsc">
+      <DependentUpon>OldEventLogDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="OldEventLogDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OldEventLogDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OldEventLogDataSet.xss">
+      <DependentUpon>OldEventLogDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ServerEventLogDataSet.xsc">
+      <DependentUpon>ServerEventLogDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ServerEventLogDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ServerEventLogDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ServerEventLogDataSet.xss">
+      <DependentUpon>ServerEventLogDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
