@@ -40,6 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DeactivateEmployeeServerLogAccessDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DeactivateEmployeeServerLogAccessDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="EventLogClass.cs" />
     <Compile Include="EventLogDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -61,6 +66,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindServerEventLogByTransactionDateDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindServerEventLogMaxDateDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindServerEventLogMaxDateDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindServerLogAccessByEmployeeIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindServerLogAccessByEmployeeIDDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="InsertEventLogEntry.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -70,6 +85,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>InsertServerEventLogEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertServerLogAccessEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertServerLogAccessEntry.xsd</DependentUpon>
     </Compile>
     <Compile Include="OldEventLogDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -87,9 +107,25 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ServerEventLogDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ServerLogAccessDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ServerLogAccessDataSet.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="DeactivateEmployeeServerLogAccessDataSet.xsc">
+      <DependentUpon>DeactivateEmployeeServerLogAccessDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DeactivateEmployeeServerLogAccessDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DeactivateEmployeeServerLogAccessDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DeactivateEmployeeServerLogAccessDataSet.xss">
+      <DependentUpon>DeactivateEmployeeServerLogAccessDataSet.xsd</DependentUpon>
+    </None>
     <None Include="EventLogDataSet.xsc">
       <DependentUpon>EventLogDataSet.xsd</DependentUpon>
     </None>
@@ -134,6 +170,28 @@
     <None Include="FindServerEventLogByTransactionDateDataSet.xss">
       <DependentUpon>FindServerEventLogByTransactionDateDataSet.xsd</DependentUpon>
     </None>
+    <None Include="FindServerEventLogMaxDateDataSet.xsc">
+      <DependentUpon>FindServerEventLogMaxDateDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindServerEventLogMaxDateDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindServerEventLogMaxDateDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindServerEventLogMaxDateDataSet.xss">
+      <DependentUpon>FindServerEventLogMaxDateDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindServerLogAccessByEmployeeIDDataSet.xsc">
+      <DependentUpon>FindServerLogAccessByEmployeeIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindServerLogAccessByEmployeeIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindServerLogAccessByEmployeeIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindServerLogAccessByEmployeeIDDataSet.xss">
+      <DependentUpon>FindServerLogAccessByEmployeeIDDataSet.xsd</DependentUpon>
+    </None>
     <None Include="InsertEventLogEntry.xsc">
       <DependentUpon>InsertEventLogEntry.xsd</DependentUpon>
     </None>
@@ -155,6 +213,17 @@
     </None>
     <None Include="InsertServerEventLogEntry.xss">
       <DependentUpon>InsertServerEventLogEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertServerLogAccessEntry.xsc">
+      <DependentUpon>InsertServerLogAccessEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertServerLogAccessEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertServerLogAccessEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertServerLogAccessEntry.xss">
+      <DependentUpon>InsertServerLogAccessEntry.xsd</DependentUpon>
     </None>
     <None Include="OldEventLogDataSet.xsc">
       <DependentUpon>OldEventLogDataSet.xsd</DependentUpon>
@@ -181,6 +250,17 @@
     </None>
     <None Include="ServerEventLogDataSet.xss">
       <DependentUpon>ServerEventLogDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ServerLogAccessDataSet.xsc">
+      <DependentUpon>ServerLogAccessDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ServerLogAccessDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ServerLogAccessDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ServerLogAccessDataSet.xss">
+      <DependentUpon>ServerLogAccessDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

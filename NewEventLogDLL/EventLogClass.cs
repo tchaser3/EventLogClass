@@ -37,6 +37,112 @@ namespace NewEventLogDLL
         FindServerEventLogByNoteKeywordDataSet aFindServerEventLogByNoteKeywordDataSet;
         FindServerEventLogByNoteKeywordDataSetTableAdapters.FindServerLogByNoteKeywordTableAdapter aFindServerEVentLogByNoteKeywordTableAdapter;
 
+        ServerLogAccessDataSet aServerLogAccessDataSet;
+        ServerLogAccessDataSetTableAdapters.serverlogaccessTableAdapter aServerLogAccessTableAdapter;
+
+        FindServerEventLogMaxDateDataSet aFindServerEventLogMaxDateDataSet;
+        FindServerEventLogMaxDateDataSetTableAdapters.FindServerEventLogMaxDateTableAdapter aFindServerEVentLogMaxDateTableAdapter;
+
+        InsertServerLogAccessEntryTableAdapters.QueriesTableAdapter aInsertServerLogAccessTableAdapter;
+
+        FindServerLogAccessByEmployeeIDDataSet aFindServerLogAccessByEmployeeIDDataSet;
+        FindServerLogAccessByEmployeeIDDataSetTableAdapters.FindServerLogAccessByEmmployeeIDTableAdapter aFindServerLogAccessByEmployeeIDTableAdapter;
+
+        DeactivateEmployeeServerLogAccessDataSetTableAdapters.QueriesTableAdapter aDeactivateEmployeeServerLogAccessTableAdapter;
+
+        public bool DeactivateEmployeeServerLogAccessEntry(int intEmployeeID)
+        {
+            bool blnFatalError = false;
+
+            try
+            {
+                aDeactivateEmployeeServerLogAccessTableAdapter = new DeactivateEmployeeServerLogAccessDataSetTableAdapters.QueriesTableAdapter();
+                aDeactivateEmployeeServerLogAccessTableAdapter.DeactivateEmployeeServerLogAccess(intEmployeeID);
+            }
+            catch (Exception Ex)
+            {
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Deactive Employee Server Log Access Entry " + Ex.Message);
+
+                blnFatalError = true;
+            }
+
+            return blnFatalError;
+        }
+        public FindServerLogAccessByEmployeeIDDataSet FindServerLogAccessByEmployeeID(int intEmployeeID)
+        {
+            try
+            {
+                aFindServerLogAccessByEmployeeIDDataSet = new FindServerLogAccessByEmployeeIDDataSet();
+                aFindServerLogAccessByEmployeeIDTableAdapter = new FindServerLogAccessByEmployeeIDDataSetTableAdapters.FindServerLogAccessByEmmployeeIDTableAdapter();
+                aFindServerLogAccessByEmployeeIDTableAdapter.Fill(aFindServerLogAccessByEmployeeIDDataSet.FindServerLogAccessByEmmployeeID, intEmployeeID);
+            }
+            catch (Exception Ex)
+            {
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Find Server Log Access By Employee ID " + Ex.Message);
+            }
+
+            return aFindServerLogAccessByEmployeeIDDataSet;
+        }
+        public bool InsertServerLogAccess(int intEmployeeID, DateTime datCreationDate, int intEnteredEmployeeID)
+        {
+            bool blnFatalError = false;
+
+            try
+            {
+                aInsertServerLogAccessTableAdapter = new InsertServerLogAccessEntryTableAdapters.QueriesTableAdapter();
+                aInsertServerLogAccessTableAdapter.InsertServerLogAccess(intEmployeeID, datCreationDate, intEnteredEmployeeID);
+            }
+            catch (Exception Ex)
+            {
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Insert Server Log Access " + Ex.Message);
+
+                blnFatalError = true;
+            }
+
+            return blnFatalError;
+        }
+        public FindServerEventLogMaxDateDataSet FindServerEventLogMaxDate()
+        {
+            try
+            {
+                aFindServerEventLogMaxDateDataSet = new FindServerEventLogMaxDateDataSet();
+                aFindServerEVentLogMaxDateTableAdapter = new FindServerEventLogMaxDateDataSetTableAdapters.FindServerEventLogMaxDateTableAdapter();
+                aFindServerEVentLogMaxDateTableAdapter.Fill(aFindServerEventLogMaxDateDataSet.FindServerEventLogMaxDate);
+            }
+            catch (Exception Ex)
+            {
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Find Server Event Log Max Date " + Ex.Message);
+            }
+
+            return aFindServerEventLogMaxDateDataSet;
+        }
+        public ServerLogAccessDataSet GetServerLogAccessInfo()
+        {
+            try
+            {
+                aServerLogAccessDataSet = new ServerLogAccessDataSet();
+                aServerLogAccessTableAdapter = new ServerLogAccessDataSetTableAdapters.serverlogaccessTableAdapter();
+                aServerLogAccessTableAdapter.Fill(aServerLogAccessDataSet.serverlogaccess);
+            }
+            catch (Exception Ex)
+            {
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Get Server Log Access Info " + Ex.Message);
+            }
+
+            return aServerLogAccessDataSet;
+        }
+        public void UpdateServerLogAccessDB(ServerLogAccessDataSet aServerLogAccessDataSet)
+        {
+            try
+            {
+                aServerLogAccessTableAdapter = new ServerLogAccessDataSetTableAdapters.serverlogaccessTableAdapter();
+                aServerLogAccessTableAdapter.Update(aServerLogAccessDataSet.serverlogaccess);
+            }
+            catch (Exception Ex)
+            {
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Get Server Log Access Info " + Ex.Message);
+            }
+        }
         public FindServerEventLogByNoteKeywordDataSet FindServerEventLogByNoteKeyword(string strNoteKeyword, DateTime datStartDate, DateTime datEndDate)
         {
             try
