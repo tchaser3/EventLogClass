@@ -66,6 +66,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindServerEventLogByTransactionDateDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindServerEventLogContentMatchDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindServerEventLogContentMatchDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindServerEventLogMaxDateDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -169,6 +174,17 @@
     </None>
     <None Include="FindServerEventLogByTransactionDateDataSet.xss">
       <DependentUpon>FindServerEventLogByTransactionDateDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindServerEventLogContentMatchDataSet.xsc">
+      <DependentUpon>FindServerEventLogContentMatchDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindServerEventLogContentMatchDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindServerEventLogContentMatchDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindServerEventLogContentMatchDataSet.xss">
+      <DependentUpon>FindServerEventLogContentMatchDataSet.xsd</DependentUpon>
     </None>
     <None Include="FindServerEventLogMaxDateDataSet.xsc">
       <DependentUpon>FindServerEventLogMaxDateDataSet.xsd</DependentUpon>

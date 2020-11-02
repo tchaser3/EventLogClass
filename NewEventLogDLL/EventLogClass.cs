@@ -50,6 +50,24 @@ namespace NewEventLogDLL
 
         DeactivateEmployeeServerLogAccessDataSetTableAdapters.QueriesTableAdapter aDeactivateEmployeeServerLogAccessTableAdapter;
 
+        FindServerEventLogContentMatchDataSet aFindServerEventLogContentMatchDataSet;
+        FindServerEventLogContentMatchDataSetTableAdapters.FindServerEventLogByContentMatchTableAdapter aFindServerEventLogContentMatchTableAdapter;
+
+        public FindServerEventLogContentMatchDataSet FindServerEventLogContentMatch(string strEventNotes, string strEventCategory, DateTime datTransactionDate)
+        {
+            try
+            {
+                aFindServerEventLogContentMatchDataSet = new FindServerEventLogContentMatchDataSet();
+                aFindServerEventLogContentMatchTableAdapter = new FindServerEventLogContentMatchDataSetTableAdapters.FindServerEventLogByContentMatchTableAdapter();
+                aFindServerEventLogContentMatchTableAdapter.Fill(aFindServerEventLogContentMatchDataSet.FindServerEventLogByContentMatch, strEventNotes, strEventCategory, datTransactionDate);
+            }
+            catch (Exception Ex)
+            {
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Find Server Event Log Content Match " + Ex.Message);
+            }
+
+            return aFindServerEventLogContentMatchDataSet;
+        }
         public bool DeactivateEmployeeServerLogAccessEntry(int intEmployeeID)
         {
             bool blnFatalError = false;
