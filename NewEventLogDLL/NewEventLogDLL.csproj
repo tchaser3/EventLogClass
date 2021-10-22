@@ -77,6 +77,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindServerEventLogMaxDateDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindServerEventLogSecurityAccessByKeywordDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindServerEventLogSecurityAccessByKeywordDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindServerEventLogSecurityAccessDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -202,6 +207,17 @@
     </None>
     <None Include="FindServerEventLogMaxDateDataSet.xss">
       <DependentUpon>FindServerEventLogMaxDateDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindServerEventLogSecurityAccessByKeywordDataSet.xsc">
+      <DependentUpon>FindServerEventLogSecurityAccessByKeywordDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindServerEventLogSecurityAccessByKeywordDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindServerEventLogSecurityAccessByKeywordDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindServerEventLogSecurityAccessByKeywordDataSet.xss">
+      <DependentUpon>FindServerEventLogSecurityAccessByKeywordDataSet.xsd</DependentUpon>
     </None>
     <None Include="FindServerEventLogSecurityAccessDataSet.xsc">
       <DependentUpon>FindServerEventLogSecurityAccessDataSet.xsd</DependentUpon>

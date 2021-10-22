@@ -56,6 +56,24 @@ namespace NewEventLogDLL
         FindServerEventLogSecurityAccessDataSet aFindServerEventLogSecurityAccessDataSet;
         FindServerEventLogSecurityAccessDataSetTableAdapters.FindServerEventLogSecurityAccessTableAdapter aFindServerEventLogSecurityAccessTableAdapter;
 
+        FindServerEventLogSecurityAccessByKeywordDataSet aFindServerEventLogSecurityAccessByKeywordDataSet;
+        FindServerEventLogSecurityAccessByKeywordDataSetTableAdapters.FindServerEventLogSercurityAccessByKeywordTableAdapter aFindServerEventLogSecurityAccessByKeywordTableAdapter;
+
+        public FindServerEventLogSecurityAccessByKeywordDataSet FindServerEventLogSecurityByKeyword(string strKeyword, DateTime datStartDate, DateTime datEndDate)
+        {
+            try
+            {
+                aFindServerEventLogSecurityAccessByKeywordDataSet = new FindServerEventLogSecurityAccessByKeywordDataSet();
+                aFindServerEventLogSecurityAccessByKeywordTableAdapter = new FindServerEventLogSecurityAccessByKeywordDataSetTableAdapters.FindServerEventLogSercurityAccessByKeywordTableAdapter();
+                aFindServerEventLogSecurityAccessByKeywordTableAdapter.Fill(aFindServerEventLogSecurityAccessByKeywordDataSet.FindServerEventLogSercurityAccessByKeyword, strKeyword, datStartDate, datEndDate);
+            }
+            catch (Exception Ex)
+            {
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Find Server Event Log Security Access by Keyword " + Ex.Message);
+            }
+
+            return aFindServerEventLogSecurityAccessByKeywordDataSet;
+        }
         public FindServerEventLogSecurityAccessDataSet FindServerEventLogSecurityAccess()
         {
             try
