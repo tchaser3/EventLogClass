@@ -53,6 +53,24 @@ namespace NewEventLogDLL
         FindServerEventLogContentMatchDataSet aFindServerEventLogContentMatchDataSet;
         FindServerEventLogContentMatchDataSetTableAdapters.FindServerEventLogByContentMatchTableAdapter aFindServerEventLogContentMatchTableAdapter;
 
+        FindServerEventLogSecurityAccessDataSet aFindServerEventLogSecurityAccessDataSet;
+        FindServerEventLogSecurityAccessDataSetTableAdapters.FindServerEventLogSecurityAccessTableAdapter aFindServerEventLogSecurityAccessTableAdapter;
+
+        public FindServerEventLogSecurityAccessDataSet FindServerEventLogSecurityAccess()
+        {
+            try
+            {
+                aFindServerEventLogSecurityAccessDataSet = new FindServerEventLogSecurityAccessDataSet();
+                aFindServerEventLogSecurityAccessTableAdapter = new FindServerEventLogSecurityAccessDataSetTableAdapters.FindServerEventLogSecurityAccessTableAdapter();
+                aFindServerEventLogSecurityAccessTableAdapter.Fill(aFindServerEventLogSecurityAccessDataSet.FindServerEventLogSecurityAccess);
+            }
+            catch (Exception Ex)
+            {
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Find Server Event Log Security Access " + Ex.Message);
+            }
+
+            return aFindServerEventLogSecurityAccessDataSet;
+        }
         public FindServerEventLogContentMatchDataSet FindServerEventLogContentMatch(string strEventNotes, string strEventCategory, DateTime datTransactionDate)
         {
             try

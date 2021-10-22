@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>NewEventLogDLL</RootNamespace>
     <AssemblyName>NewEventLogDLL</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -75,6 +76,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FindServerEventLogMaxDateDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindServerEventLogSecurityAccessDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindServerEventLogSecurityAccessDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="FindServerLogAccessByEmployeeIDDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -196,6 +202,17 @@
     </None>
     <None Include="FindServerEventLogMaxDateDataSet.xss">
       <DependentUpon>FindServerEventLogMaxDateDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindServerEventLogSecurityAccessDataSet.xsc">
+      <DependentUpon>FindServerEventLogSecurityAccessDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindServerEventLogSecurityAccessDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindServerEventLogSecurityAccessDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindServerEventLogSecurityAccessDataSet.xss">
+      <DependentUpon>FindServerEventLogSecurityAccessDataSet.xsd</DependentUpon>
     </None>
     <None Include="FindServerLogAccessByEmployeeIDDataSet.xsc">
       <DependentUpon>FindServerLogAccessByEmployeeIDDataSet.xsd</DependentUpon>

@@ -20,17 +20,17 @@ namespace NewEventLogDLL {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("OldEventLogDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("FindServerEventLogSecurityAccessDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class OldEventLogDataSet : global::System.Data.DataSet {
+    public partial class FindServerEventLogSecurityAccessDataSet : global::System.Data.DataSet {
         
-        private eventlogDataTable tableeventlog;
+        private FindServerEventLogSecurityAccessDataTable tableFindServerEventLogSecurityAccess;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public OldEventLogDataSet() {
+        public FindServerEventLogSecurityAccessDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace NewEventLogDLL {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected OldEventLogDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected FindServerEventLogSecurityAccessDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace NewEventLogDLL {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["eventlog"] != null)) {
-                    base.Tables.Add(new eventlogDataTable(ds.Tables["eventlog"]));
+                if ((ds.Tables["FindServerEventLogSecurityAccess"] != null)) {
+                    base.Tables.Add(new FindServerEventLogSecurityAccessDataTable(ds.Tables["FindServerEventLogSecurityAccess"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace NewEventLogDLL {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public eventlogDataTable eventlog {
+        public FindServerEventLogSecurityAccessDataTable FindServerEventLogSecurityAccess {
             get {
-                return this.tableeventlog;
+                return this.tableFindServerEventLogSecurityAccess;
             }
         }
         
@@ -127,7 +127,7 @@ namespace NewEventLogDLL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            OldEventLogDataSet cln = ((OldEventLogDataSet)(base.Clone()));
+            FindServerEventLogSecurityAccessDataSet cln = ((FindServerEventLogSecurityAccessDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace NewEventLogDLL {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["eventlog"] != null)) {
-                    base.Tables.Add(new eventlogDataTable(ds.Tables["eventlog"]));
+                if ((ds.Tables["FindServerEventLogSecurityAccess"] != null)) {
+                    base.Tables.Add(new FindServerEventLogSecurityAccessDataTable(ds.Tables["FindServerEventLogSecurityAccess"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace NewEventLogDLL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableeventlog = ((eventlogDataTable)(base.Tables["eventlog"]));
+            this.tableFindServerEventLogSecurityAccess = ((FindServerEventLogSecurityAccessDataTable)(base.Tables["FindServerEventLogSecurityAccess"]));
             if ((initTable == true)) {
-                if ((this.tableeventlog != null)) {
-                    this.tableeventlog.InitVars();
+                if ((this.tableFindServerEventLogSecurityAccess != null)) {
+                    this.tableFindServerEventLogSecurityAccess.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace NewEventLogDLL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "OldEventLogDataSet";
+            this.DataSetName = "FindServerEventLogSecurityAccessDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/OldEventLogDataSet.xsd";
+            this.Namespace = "http://tempuri.org/FindServerEventLogSecurityAccessDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableeventlog = new eventlogDataTable();
-            base.Tables.Add(this.tableeventlog);
+            this.tableFindServerEventLogSecurityAccess = new FindServerEventLogSecurityAccessDataTable();
+            base.Tables.Add(this.tableFindServerEventLogSecurityAccess);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeeventlog() {
+        private bool ShouldSerializeFindServerEventLogSecurityAccess() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace NewEventLogDLL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            OldEventLogDataSet ds = new OldEventLogDataSet();
+            FindServerEventLogSecurityAccessDataSet ds = new FindServerEventLogSecurityAccessDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,25 +270,23 @@ namespace NewEventLogDLL {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void eventlogRowChangeEventHandler(object sender, eventlogRowChangeEvent e);
+        public delegate void FindServerEventLogSecurityAccessRowChangeEventHandler(object sender, FindServerEventLogSecurityAccessRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class eventlogDataTable : global::System.Data.TypedTableBase<eventlogRow> {
+        public partial class FindServerEventLogSecurityAccessDataTable : global::System.Data.TypedTableBase<FindServerEventLogSecurityAccessRow> {
             
-            private global::System.Data.DataColumn columnTransactionID;
+            private global::System.Data.DataColumn columnTransactionDate;
             
-            private global::System.Data.DataColumn columnDate;
-            
-            private global::System.Data.DataColumn columnLogEntry;
+            private global::System.Data.DataColumn columnEventNotes;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public eventlogDataTable() {
-                this.TableName = "eventlog";
+            public FindServerEventLogSecurityAccessDataTable() {
+                this.TableName = "FindServerEventLogSecurityAccess";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -296,7 +294,7 @@ namespace NewEventLogDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal eventlogDataTable(global::System.Data.DataTable table) {
+            internal FindServerEventLogSecurityAccessDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -313,32 +311,24 @@ namespace NewEventLogDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected eventlogDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected FindServerEventLogSecurityAccessDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn TransactionIDColumn {
+            public global::System.Data.DataColumn TransactionDateColumn {
                 get {
-                    return this.columnTransactionID;
+                    return this.columnTransactionDate;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn DateColumn {
+            public global::System.Data.DataColumn EventNotesColumn {
                 get {
-                    return this.columnDate;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn LogEntryColumn {
-                get {
-                    return this.columnLogEntry;
+                    return this.columnEventNotes;
                 }
             }
             
@@ -353,54 +343,46 @@ namespace NewEventLogDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public eventlogRow this[int index] {
+            public FindServerEventLogSecurityAccessRow this[int index] {
                 get {
-                    return ((eventlogRow)(this.Rows[index]));
+                    return ((FindServerEventLogSecurityAccessRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event eventlogRowChangeEventHandler eventlogRowChanging;
+            public event FindServerEventLogSecurityAccessRowChangeEventHandler FindServerEventLogSecurityAccessRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event eventlogRowChangeEventHandler eventlogRowChanged;
+            public event FindServerEventLogSecurityAccessRowChangeEventHandler FindServerEventLogSecurityAccessRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event eventlogRowChangeEventHandler eventlogRowDeleting;
+            public event FindServerEventLogSecurityAccessRowChangeEventHandler FindServerEventLogSecurityAccessRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event eventlogRowChangeEventHandler eventlogRowDeleted;
+            public event FindServerEventLogSecurityAccessRowChangeEventHandler FindServerEventLogSecurityAccessRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddeventlogRow(eventlogRow row) {
+            public void AddFindServerEventLogSecurityAccessRow(FindServerEventLogSecurityAccessRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public eventlogRow AddeventlogRow(int TransactionID, System.DateTime Date, string LogEntry) {
-                eventlogRow roweventlogRow = ((eventlogRow)(this.NewRow()));
+            public FindServerEventLogSecurityAccessRow AddFindServerEventLogSecurityAccessRow(System.DateTime TransactionDate, string EventNotes) {
+                FindServerEventLogSecurityAccessRow rowFindServerEventLogSecurityAccessRow = ((FindServerEventLogSecurityAccessRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        TransactionID,
-                        Date,
-                        LogEntry};
-                roweventlogRow.ItemArray = columnValuesArray;
-                this.Rows.Add(roweventlogRow);
-                return roweventlogRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public eventlogRow FindByTransactionID(int TransactionID) {
-                return ((eventlogRow)(this.Rows.Find(new object[] {
-                            TransactionID})));
+                        TransactionDate,
+                        EventNotes};
+                rowFindServerEventLogSecurityAccessRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowFindServerEventLogSecurityAccessRow);
+                return rowFindServerEventLogSecurityAccessRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                eventlogDataTable cln = ((eventlogDataTable)(base.Clone()));
+                FindServerEventLogSecurityAccessDataTable cln = ((FindServerEventLogSecurityAccessDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -408,57 +390,52 @@ namespace NewEventLogDLL {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new eventlogDataTable();
+                return new FindServerEventLogSecurityAccessDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnTransactionID = base.Columns["TransactionID"];
-                this.columnDate = base.Columns["Date"];
-                this.columnLogEntry = base.Columns["LogEntry"];
+                this.columnTransactionDate = base.Columns["TransactionDate"];
+                this.columnEventNotes = base.Columns["EventNotes"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnTransactionID = new global::System.Data.DataColumn("TransactionID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTransactionID);
-                this.columnDate = new global::System.Data.DataColumn("Date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDate);
-                this.columnLogEntry = new global::System.Data.DataColumn("LogEntry", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnLogEntry);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnTransactionID}, true));
-                this.columnTransactionID.AllowDBNull = false;
-                this.columnTransactionID.Unique = true;
-                this.columnLogEntry.MaxLength = 536870910;
+                this.columnTransactionDate = new global::System.Data.DataColumn("TransactionDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTransactionDate);
+                this.columnEventNotes = new global::System.Data.DataColumn("EventNotes", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEventNotes);
+                this.columnTransactionDate.AllowDBNull = false;
+                this.columnEventNotes.AllowDBNull = false;
+                this.columnEventNotes.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public eventlogRow NeweventlogRow() {
-                return ((eventlogRow)(this.NewRow()));
+            public FindServerEventLogSecurityAccessRow NewFindServerEventLogSecurityAccessRow() {
+                return ((FindServerEventLogSecurityAccessRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new eventlogRow(builder);
+                return new FindServerEventLogSecurityAccessRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(eventlogRow);
+                return typeof(FindServerEventLogSecurityAccessRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.eventlogRowChanged != null)) {
-                    this.eventlogRowChanged(this, new eventlogRowChangeEvent(((eventlogRow)(e.Row)), e.Action));
+                if ((this.FindServerEventLogSecurityAccessRowChanged != null)) {
+                    this.FindServerEventLogSecurityAccessRowChanged(this, new FindServerEventLogSecurityAccessRowChangeEvent(((FindServerEventLogSecurityAccessRow)(e.Row)), e.Action));
                 }
             }
             
@@ -466,8 +443,8 @@ namespace NewEventLogDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.eventlogRowChanging != null)) {
-                    this.eventlogRowChanging(this, new eventlogRowChangeEvent(((eventlogRow)(e.Row)), e.Action));
+                if ((this.FindServerEventLogSecurityAccessRowChanging != null)) {
+                    this.FindServerEventLogSecurityAccessRowChanging(this, new FindServerEventLogSecurityAccessRowChangeEvent(((FindServerEventLogSecurityAccessRow)(e.Row)), e.Action));
                 }
             }
             
@@ -475,8 +452,8 @@ namespace NewEventLogDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.eventlogRowDeleted != null)) {
-                    this.eventlogRowDeleted(this, new eventlogRowChangeEvent(((eventlogRow)(e.Row)), e.Action));
+                if ((this.FindServerEventLogSecurityAccessRowDeleted != null)) {
+                    this.FindServerEventLogSecurityAccessRowDeleted(this, new FindServerEventLogSecurityAccessRowChangeEvent(((FindServerEventLogSecurityAccessRow)(e.Row)), e.Action));
                 }
             }
             
@@ -484,14 +461,14 @@ namespace NewEventLogDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.eventlogRowDeleting != null)) {
-                    this.eventlogRowDeleting(this, new eventlogRowChangeEvent(((eventlogRow)(e.Row)), e.Action));
+                if ((this.FindServerEventLogSecurityAccessRowDeleting != null)) {
+                    this.FindServerEventLogSecurityAccessRowDeleting(this, new FindServerEventLogSecurityAccessRowChangeEvent(((FindServerEventLogSecurityAccessRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveeventlogRow(eventlogRow row) {
+            public void RemoveFindServerEventLogSecurityAccessRow(FindServerEventLogSecurityAccessRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -500,7 +477,7 @@ namespace NewEventLogDLL {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                OldEventLogDataSet ds = new OldEventLogDataSet();
+                FindServerEventLogSecurityAccessDataSet ds = new FindServerEventLogSecurityAccessDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -518,7 +495,7 @@ namespace NewEventLogDLL {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "eventlogDataTable";
+                attribute2.FixedValue = "FindServerEventLogSecurityAccessDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -562,82 +539,37 @@ namespace NewEventLogDLL {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class eventlogRow : global::System.Data.DataRow {
+        public partial class FindServerEventLogSecurityAccessRow : global::System.Data.DataRow {
             
-            private eventlogDataTable tableeventlog;
+            private FindServerEventLogSecurityAccessDataTable tableFindServerEventLogSecurityAccess;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal eventlogRow(global::System.Data.DataRowBuilder rb) : 
+            internal FindServerEventLogSecurityAccessRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableeventlog = ((eventlogDataTable)(this.Table));
+                this.tableFindServerEventLogSecurityAccess = ((FindServerEventLogSecurityAccessDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int TransactionID {
+            public System.DateTime TransactionDate {
                 get {
-                    return ((int)(this[this.tableeventlog.TransactionIDColumn]));
+                    return ((global::System.DateTime)(this[this.tableFindServerEventLogSecurityAccess.TransactionDateColumn]));
                 }
                 set {
-                    this[this.tableeventlog.TransactionIDColumn] = value;
+                    this[this.tableFindServerEventLogSecurityAccess.TransactionDateColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public System.DateTime Date {
+            public string EventNotes {
                 get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableeventlog.DateColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Date\' in table \'eventlog\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tableFindServerEventLogSecurityAccess.EventNotesColumn]));
                 }
                 set {
-                    this[this.tableeventlog.DateColumn] = value;
+                    this[this.tableFindServerEventLogSecurityAccess.EventNotesColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string LogEntry {
-                get {
-                    try {
-                        return ((string)(this[this.tableeventlog.LogEntryColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'LogEntry\' in table \'eventlog\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableeventlog.LogEntryColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsDateNull() {
-                return this.IsNull(this.tableeventlog.DateColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetDateNull() {
-                this[this.tableeventlog.DateColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsLogEntryNull() {
-                return this.IsNull(this.tableeventlog.LogEntryColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetLogEntryNull() {
-                this[this.tableeventlog.LogEntryColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -645,22 +577,22 @@ namespace NewEventLogDLL {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class eventlogRowChangeEvent : global::System.EventArgs {
+        public class FindServerEventLogSecurityAccessRowChangeEvent : global::System.EventArgs {
             
-            private eventlogRow eventRow;
+            private FindServerEventLogSecurityAccessRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public eventlogRowChangeEvent(eventlogRow row, global::System.Data.DataRowAction action) {
+            public FindServerEventLogSecurityAccessRowChangeEvent(FindServerEventLogSecurityAccessRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public eventlogRow Row {
+            public FindServerEventLogSecurityAccessRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -676,7 +608,7 @@ namespace NewEventLogDLL {
         }
     }
 }
-namespace NewEventLogDLL.OldEventLogDataSetTableAdapters {
+namespace NewEventLogDLL.FindServerEventLogSecurityAccessDataSetTableAdapters {
     
     
     /// <summary>
@@ -688,27 +620,27 @@ namespace NewEventLogDLL.OldEventLogDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class eventlogTableAdapter : global::System.ComponentModel.Component {
+    public partial class FindServerEventLogSecurityAccessTableAdapter : global::System.ComponentModel.Component {
         
-        private global::System.Data.OleDb.OleDbDataAdapter _adapter;
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
-        private global::System.Data.OleDb.OleDbConnection _connection;
+        private global::System.Data.SqlClient.SqlConnection _connection;
         
-        private global::System.Data.OleDb.OleDbTransaction _transaction;
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
         
-        private global::System.Data.OleDb.OleDbCommand[] _commandCollection;
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
         
         private bool _clearBeforeFill;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public eventlogTableAdapter() {
+        public FindServerEventLogSecurityAccessTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected internal global::System.Data.OleDb.OleDbDataAdapter Adapter {
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
             get {
                 if ((this._adapter == null)) {
                     this.InitAdapter();
@@ -719,7 +651,7 @@ namespace NewEventLogDLL.OldEventLogDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        internal global::System.Data.OleDb.OleDbConnection Connection {
+        internal global::System.Data.SqlClient.SqlConnection Connection {
             get {
                 if ((this._connection == null)) {
                     this.InitConnection();
@@ -739,7 +671,7 @@ namespace NewEventLogDLL.OldEventLogDataSetTableAdapters {
                 }
                 for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
                     if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.OleDb.OleDbCommand)(this.CommandCollection[i])).Connection = value;
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
                     }
                 }
             }
@@ -747,7 +679,7 @@ namespace NewEventLogDLL.OldEventLogDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        internal global::System.Data.OleDb.OleDbTransaction Transaction {
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
             get {
                 return this._transaction;
             }
@@ -773,7 +705,7 @@ namespace NewEventLogDLL.OldEventLogDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected global::System.Data.OleDb.OleDbCommand[] CommandCollection {
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
             get {
                 if ((this._commandCollection == null)) {
                     this.InitCommandCollection();
@@ -796,64 +728,38 @@ namespace NewEventLogDLL.OldEventLogDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitAdapter() {
-            this._adapter = new global::System.Data.OleDb.OleDbDataAdapter();
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "eventlog";
-            tableMapping.ColumnMappings.Add("TransactionID", "TransactionID");
-            tableMapping.ColumnMappings.Add("Date", "Date");
-            tableMapping.ColumnMappings.Add("LogEntry", "LogEntry");
+            tableMapping.DataSetTable = "FindServerEventLogSecurityAccess";
+            tableMapping.ColumnMappings.Add("TransactionDate", "TransactionDate");
+            tableMapping.ColumnMappings.Add("EventNotes", "EventNotes");
             this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM `eventlog` WHERE ((`TransactionID` = ?) AND ((? = 1 AND `Date` IS NUL" +
-                "L) OR (`Date` = ?)))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_TransactionID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TransactionID", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Date", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Date", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Date", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Date", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `eventlog` (`TransactionID`, `Date`, `LogEntry`) VALUES (?, ?, ?)";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("TransactionID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TransactionID", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Date", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Date", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("LogEntry", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "LogEntry", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE `eventlog` SET `TransactionID` = ?, `Date` = ?, `LogEntry` = ? WHERE ((`Tr" +
-                "ansactionID` = ?) AND ((? = 1 AND `Date` IS NULL) OR (`Date` = ?)))";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("TransactionID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TransactionID", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Date", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Date", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("LogEntry", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "LogEntry", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_TransactionID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TransactionID", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Date", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Date", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Date", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Date", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
-            //this._connection = new global::System.Data.OleDb.OleDbConnection();
-            //this._connection.ConnectionString = global::NewEventLogDLL.Properties.Settings.Default.toolsConnectionString;
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::NewEventLogDLL.Properties.Settings.Default.whsetracConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
-            this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT TransactionID, [Date], LogEntry FROM eventlog";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].CommandText = "dbo.FindServerEventLogSecurityAccess";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(OldEventLogDataSet.eventlogDataTable dataTable) {
+        public virtual int Fill(FindServerEventLogSecurityAccessDataSet.FindServerEventLogSecurityAccessDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -866,175 +772,11 @@ namespace NewEventLogDLL.OldEventLogDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual OldEventLogDataSet.eventlogDataTable GetData() {
+        public virtual FindServerEventLogSecurityAccessDataSet.FindServerEventLogSecurityAccessDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            OldEventLogDataSet.eventlogDataTable dataTable = new OldEventLogDataSet.eventlogDataTable();
+            FindServerEventLogSecurityAccessDataSet.FindServerEventLogSecurityAccessDataTable dataTable = new FindServerEventLogSecurityAccessDataSet.FindServerEventLogSecurityAccessDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(OldEventLogDataSet.eventlogDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(OldEventLogDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "eventlog");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(global::System.Nullable<int> Original_TransactionID, global::System.Nullable<global::System.DateTime> Original_Date) {
-            if ((Original_TransactionID.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_TransactionID.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Date.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((System.DateTime)(Original_Date.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<int> TransactionID, global::System.Nullable<global::System.DateTime> Date, string LogEntry) {
-            if ((TransactionID.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((int)(TransactionID.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            if ((Date.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((System.DateTime)(Date.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((LogEntry == null)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(LogEntry));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> TransactionID, global::System.Nullable<global::System.DateTime> Date, string LogEntry, global::System.Nullable<int> Original_TransactionID, global::System.Nullable<global::System.DateTime> Original_Date) {
-            if ((TransactionID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(TransactionID.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            if ((Date.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((System.DateTime)(Date.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((LogEntry == null)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(LogEntry));
-            }
-            if ((Original_TransactionID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_TransactionID.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Date.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(Original_Date.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<global::System.DateTime> Date, string LogEntry, global::System.Nullable<int> Original_TransactionID, global::System.Nullable<global::System.DateTime> Original_Date) {
-            return this.Update(Original_TransactionID, Date, LogEntry, Original_TransactionID, Original_Date);
         }
     }
     
@@ -1050,8 +792,6 @@ namespace NewEventLogDLL.OldEventLogDataSetTableAdapters {
         
         private UpdateOrderOption _updateOrder;
         
-        private eventlogTableAdapter _eventlogTableAdapter;
-        
         private bool _backupDataSetBeforeUpdate;
         
         private global::System.Data.IDbConnection _connection;
@@ -1064,20 +804,6 @@ namespace NewEventLogDLL.OldEventLogDataSetTableAdapters {
             }
             set {
                 this._updateOrder = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
-        public eventlogTableAdapter eventlogTableAdapter {
-            get {
-                return this._eventlogTableAdapter;
-            }
-            set {
-                this._eventlogTableAdapter = value;
             }
         }
         
@@ -1100,10 +826,6 @@ namespace NewEventLogDLL.OldEventLogDataSetTableAdapters {
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._eventlogTableAdapter != null) 
-                            && (this._eventlogTableAdapter.Connection != null))) {
-                    return this._eventlogTableAdapter.Connection;
-                }
                 return null;
             }
             set {
@@ -1117,9 +839,6 @@ namespace NewEventLogDLL.OldEventLogDataSetTableAdapters {
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._eventlogTableAdapter != null)) {
-                    count = (count + 1);
-                }
                 return count;
             }
         }
@@ -1129,17 +848,8 @@ namespace NewEventLogDLL.OldEventLogDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(OldEventLogDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(FindServerEventLogSecurityAccessDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._eventlogTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.eventlog.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._eventlogTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             return result;
         }
         
@@ -1148,16 +858,8 @@ namespace NewEventLogDLL.OldEventLogDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(OldEventLogDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(FindServerEventLogSecurityAccessDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._eventlogTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.eventlog.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._eventlogTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             return result;
         }
         
@@ -1166,16 +868,8 @@ namespace NewEventLogDLL.OldEventLogDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(OldEventLogDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(FindServerEventLogSecurityAccessDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._eventlogTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.eventlog.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._eventlogTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             return result;
         }
         
@@ -1208,17 +902,12 @@ namespace NewEventLogDLL.OldEventLogDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(OldEventLogDataSet dataSet) {
+        public virtual int UpdateAll(FindServerEventLogSecurityAccessDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
-            }
-            if (((this._eventlogTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._eventlogTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
-                        "tring.");
             }
             global::System.Data.IDbConnection workConnection = this.Connection;
             if ((workConnection == null)) {
@@ -1252,15 +941,6 @@ namespace NewEventLogDLL.OldEventLogDataSetTableAdapters {
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._eventlogTableAdapter != null)) {
-                    revertConnections.Add(this._eventlogTableAdapter, this._eventlogTableAdapter.Connection);
-                    this._eventlogTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(workConnection));
-                    this._eventlogTableAdapter.Transaction = ((global::System.Data.OleDb.OleDbTransaction)(workTransaction));
-                    if (this._eventlogTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._eventlogTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._eventlogTableAdapter.Adapter);
-                    }
-                }
                 // 
                 //---- Perform updates -----------
                 //
@@ -1318,10 +998,6 @@ namespace NewEventLogDLL.OldEventLogDataSetTableAdapters {
             finally {
                 if (workConnOpened) {
                     workConnection.Close();
-                }
-                if ((this._eventlogTableAdapter != null)) {
-                    this._eventlogTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(revertConnections[this._eventlogTableAdapter]));
-                    this._eventlogTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];
