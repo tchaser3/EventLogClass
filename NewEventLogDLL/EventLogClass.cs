@@ -59,6 +59,147 @@ namespace NewEventLogDLL
         FindServerEventLogSecurityAccessByKeywordDataSet aFindServerEventLogSecurityAccessByKeywordDataSet;
         FindServerEventLogSecurityAccessByKeywordDataSetTableAdapters.FindServerEventLogSercurityAccessByKeywordTableAdapter aFindServerEventLogSecurityAccessByKeywordTableAdapter;
 
+        FindServerEventLogByDateRangeDataSet aFindServerEventLogByDateRangeDataSet;
+        FindServerEventLogByDateRangeDataSetTableAdapters.FindServerEventLogByDateRangeTableAdapter aFindServerEventLogByDateRangeTableAdapter;
+
+        ServerEventLogForReportsDataSet aServerEventLogForReportsDataSet;
+        ServerEventLogForReportsDataSetTableAdapters.ServerEventLogForReportsTableAdapter aServerEventLogForReportsTableAdapter;
+
+        InsertServerEventLogForReportsEntryTableAdapters.QueriesTableAdapter aInsertServerEventLogForReportsEntryTableAdapter;
+
+        FindServerEventLogForReportsVerificationDataSet aFindServerEventLogForReportsVerificationDataSet;
+        FindServerEventLogForReportsVerificationDataSetTableAdapters.FindServerEventLogForReportsVerificationTableAdapter aFindServerEventLogForReportsVerificationTableAdapter;
+
+        FindServerEventLogForReportsByUserDataSet aFindServerEventLogForReportsByUserDataSet;
+        FindServerEventLogForReportsByUserDataSetTableAdapters.FindServerEventLogForReportsByUserTableAdapter aFindServerEventLogForReportsByUserTableAdapter;
+
+        FindServerEventLogForReportsByItemDataSet aFindServerEventLogForReportsByItemDataSet;
+        FindServerEventLogForReportsByItemDataSetTableAdapters.FindServerEventLogForReportsByItemTableAdapter aFindServerEventLogForReportsByItemTableAdapter;
+
+        FindServerEventLogForReportsByDateRangeDataSet aFindServerEventLogForReportsByDateRangeDataSet;
+        FindServerEventLogForReportsByDateRangeDataSetTableAdapters.FindServerEventLogForReportsByDateRangeTableAdapter aFindServerEventLogForReportsByDateRangeTableAdapter;
+
+        public FindServerEventLogForReportsByDateRangeDataSet FindServerEventLogForReportsByDateRange(DateTime datStartDate, DateTime datEndDate)
+        {
+            try
+            {
+                aFindServerEventLogForReportsByDateRangeDataSet = new FindServerEventLogForReportsByDateRangeDataSet();
+                aFindServerEventLogForReportsByDateRangeTableAdapter = new FindServerEventLogForReportsByDateRangeDataSetTableAdapters.FindServerEventLogForReportsByDateRangeTableAdapter();
+                aFindServerEventLogForReportsByDateRangeTableAdapter.Fill(aFindServerEventLogForReportsByDateRangeDataSet.FindServerEventLogForReportsByDateRange, datStartDate, datEndDate);
+            }
+            catch (Exception Ex)
+            {
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Find Server Event Log For Reports By Date Range " + Ex.Message);
+            }
+
+            return aFindServerEventLogForReportsByDateRangeDataSet;
+        }
+        public FindServerEventLogForReportsByItemDataSet FindServerEventLogForReportsByItem(string strItemAccessed, DateTime datStartDate, DateTime datEndDate)
+        {
+            try
+            {
+                aFindServerEventLogForReportsByItemDataSet = new FindServerEventLogForReportsByItemDataSet();
+                aFindServerEventLogForReportsByItemTableAdapter = new FindServerEventLogForReportsByItemDataSetTableAdapters.FindServerEventLogForReportsByItemTableAdapter();
+                aFindServerEventLogForReportsByItemTableAdapter.Fill(aFindServerEventLogForReportsByItemDataSet.FindServerEventLogForReportsByItem, strItemAccessed, datStartDate, datEndDate);
+            }
+            catch (Exception Ex)
+            {
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Find Server Event Log For Reports By Item " + Ex.Message);
+            }
+
+            return aFindServerEventLogForReportsByItemDataSet;
+        }
+        public FindServerEventLogForReportsByUserDataSet FindServerEventLogForReportsByUser(string strLogonName, DateTime datStartDate, DateTime datEndDate)
+        {
+            try
+            {
+                aFindServerEventLogForReportsByUserDataSet = new FindServerEventLogForReportsByUserDataSet();
+                aFindServerEventLogForReportsByUserTableAdapter = new FindServerEventLogForReportsByUserDataSetTableAdapters.FindServerEventLogForReportsByUserTableAdapter();
+                aFindServerEventLogForReportsByUserTableAdapter.Fill(aFindServerEventLogForReportsByUserDataSet.FindServerEventLogForReportsByUser, strLogonName, datStartDate, datEndDate);
+            }
+            catch (Exception Ex)
+            {
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Find Server Event Log For Reports By User " + Ex.Message);
+            }
+
+            return aFindServerEventLogForReportsByUserDataSet;
+        }
+        public FindServerEventLogForReportsVerificationDataSet FindServerEventLogForReportsVerification(DateTime datTransactionDate, string strLogonName, string strItemAccessed)
+        {
+            try
+            {
+                aFindServerEventLogForReportsVerificationDataSet = new FindServerEventLogForReportsVerificationDataSet();
+                aFindServerEventLogForReportsVerificationTableAdapter = new FindServerEventLogForReportsVerificationDataSetTableAdapters.FindServerEventLogForReportsVerificationTableAdapter();
+                aFindServerEventLogForReportsVerificationTableAdapter.Fill(aFindServerEventLogForReportsVerificationDataSet.FindServerEventLogForReportsVerification, datTransactionDate, strLogonName, strItemAccessed);
+            }
+            catch (Exception Ex)
+            {
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Find Server Eventlog For Reports Verification " + Ex.Message);
+            }
+
+            return aFindServerEventLogForReportsVerificationDataSet;
+        }
+        public bool InsertServerEventLogForReports(DateTime datTransactionDate, string strLogonName, string strItemAccessed)
+        {
+            bool blnFatalError = false;
+
+            try
+            {
+                aInsertServerEventLogForReportsEntryTableAdapter = new InsertServerEventLogForReportsEntryTableAdapters.QueriesTableAdapter();
+                aInsertServerEventLogForReportsEntryTableAdapter.InsertServerEventLogForReports(datTransactionDate, strLogonName, strItemAccessed);
+            }
+            catch (Exception Ex)
+            {
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Insert Server Event Log For Reports " + Ex.Message);
+
+                blnFatalError = true;
+            }
+
+            return blnFatalError;
+        }
+        public ServerEventLogForReportsDataSet GetServerEventLogForReportsDB()
+        {
+            try
+            {
+                aServerEventLogForReportsDataSet = new ServerEventLogForReportsDataSet();
+                aServerEventLogForReportsTableAdapter = new ServerEventLogForReportsDataSetTableAdapters.ServerEventLogForReportsTableAdapter();
+                aServerEventLogForReportsTableAdapter.Fill(aServerEventLogForReportsDataSet.ServerEventLogForReports);
+            }
+            catch (Exception ex)
+            {
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Get Server Event Log For Reports DB " + ex.Message);
+            }
+
+            return aServerEventLogForReportsDataSet;
+        }
+        public void UpdateServerEventLogForReportsDB(ServerEventLogForReportsDataSet aServerEventLogForReportsDataSet)
+        {
+            try
+            {
+                aServerEventLogForReportsTableAdapter = new ServerEventLogForReportsDataSetTableAdapters.ServerEventLogForReportsTableAdapter();
+                aServerEventLogForReportsTableAdapter.Update(aServerEventLogForReportsDataSet.ServerEventLogForReports);
+            }
+            catch (Exception ex)
+            {
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Update Server Event Log For Reports DB " + ex.Message);
+            }
+        }
+
+        public FindServerEventLogByDateRangeDataSet FindServerEventLogByDateRange(DateTime datStartDate, DateTime datEndDate)
+        {
+            try
+            {
+                aFindServerEventLogByDateRangeDataSet = new FindServerEventLogByDateRangeDataSet();
+                aFindServerEventLogByDateRangeTableAdapter = new FindServerEventLogByDateRangeDataSetTableAdapters.FindServerEventLogByDateRangeTableAdapter();
+                aFindServerEventLogByDateRangeTableAdapter.Fill(aFindServerEventLogByDateRangeDataSet.FindServerEventLogByDateRange, datStartDate, datEndDate);
+            }
+            catch (Exception ex)
+            {
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Find Server Event Log by Date Range " + ex.Message);
+            }
+
+            return aFindServerEventLogByDateRangeDataSet;
+        }
         public FindServerEventLogSecurityAccessByKeywordDataSet FindServerEventLogSecurityByKeyword(string strKeyword, DateTime datStartDate, DateTime datEndDate)
         {
             try
