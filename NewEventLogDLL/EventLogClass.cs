@@ -79,6 +79,112 @@ namespace NewEventLogDLL
         FindServerEventLogForReportsByDateRangeDataSet aFindServerEventLogForReportsByDateRangeDataSet;
         FindServerEventLogForReportsByDateRangeDataSetTableAdapters.FindServerEventLogForReportsByDateRangeTableAdapter aFindServerEventLogForReportsByDateRangeTableAdapter;
 
+        ServerLogSearchTermsDataSet aServerLogSearchTermsDataSet;
+        ServerLogSearchTermsDataSetTableAdapters.serverlogsearchtermsTableAdapter aServerLogSearchTermsTableAdapter;
+
+        InsertServerLogSearchTermEntryTableAdapters.QueriesTableAdapter aInsertServerLogSearchTermTableAdapter;
+
+        UpdateServerLogSearchTermActiveEntryTableAdapters.QueriesTableAdapter aUpdateServerLogSearchTermActiveTableAdapter;
+
+        FindActiveServerLogSearchTermsDataSet aFindActiveServerLogSearchTermsDataSet;
+        FindActiveServerLogSearchTermsDataSetTableAdapters.FindActiveServerLogSearchTermsTableAdapter aFindActiveServerLogSearchTermsTableAdapter;
+
+        FindSortedServerLogSearchTermsDataSet aFindSortedServerLogSearchTermsDataSet;
+        FindSortedServerLogSearchTermsDataSetTableAdapters.FindSortedServerLogSearchTermsTableAdapter aFindSortedServerLogSearchTermsTableAdapter;
+
+        public FindSortedServerLogSearchTermsDataSet FindSortedServerLogSearchTerms()
+        {
+            try
+            {
+                aFindSortedServerLogSearchTermsDataSet = new FindSortedServerLogSearchTermsDataSet();
+                aFindSortedServerLogSearchTermsTableAdapter = new FindSortedServerLogSearchTermsDataSetTableAdapters.FindSortedServerLogSearchTermsTableAdapter();
+                aFindSortedServerLogSearchTermsTableAdapter.Fill(aFindSortedServerLogSearchTermsDataSet.FindSortedServerLogSearchTerms);
+            }
+            catch(Exception Ex)
+            {
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Find Sorted Server Log Search Terms " + Ex.Message);
+            }
+
+            return aFindSortedServerLogSearchTermsDataSet;
+        }
+        public FindActiveServerLogSearchTermsDataSet FindActiveServerLogSearchTerms()
+        {
+            try
+            {
+                aFindActiveServerLogSearchTermsDataSet = new FindActiveServerLogSearchTermsDataSet();
+                aFindActiveServerLogSearchTermsTableAdapter = new FindActiveServerLogSearchTermsDataSetTableAdapters.FindActiveServerLogSearchTermsTableAdapter();
+                aFindActiveServerLogSearchTermsTableAdapter.Fill(aFindActiveServerLogSearchTermsDataSet.FindActiveServerLogSearchTerms);
+            }
+            catch (Exception ex)
+            {
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Find Active Server Log Search Terms " + ex.Message);
+            }
+
+            return aFindActiveServerLogSearchTermsDataSet;
+        }
+        public bool UpdateServerLogSearchTermActive(int intTransactionID, bool blnTermActive)
+        {
+            bool blnFatalError = false;
+
+            try
+            {
+                aUpdateServerLogSearchTermActiveTableAdapter = new UpdateServerLogSearchTermActiveEntryTableAdapters.QueriesTableAdapter();
+                aUpdateServerLogSearchTermActiveTableAdapter.UpdateServerLogSearchTermActive(intTransactionID, blnTermActive);
+            }
+            catch (Exception ex)
+            {
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Update Server Log Search Term Active " + ex.Message);
+
+                blnFatalError = true;
+            }
+
+            return blnFatalError;
+        }
+        public bool InsertServerLogSearchTerm(string strSearchTerm)
+        {
+            bool blnFatalError = false;
+
+            try
+            {
+                aInsertServerLogSearchTermTableAdapter = new InsertServerLogSearchTermEntryTableAdapters.QueriesTableAdapter();
+                aInsertServerLogSearchTermTableAdapter.InsertServerLogSearchTerm(strSearchTerm, DateTime.Now);
+            }
+            catch (Exception ex)
+            {
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Insert Server Log Search Term " + ex.Message);
+
+                blnFatalError = true;
+            }
+
+            return blnFatalError;
+        }
+        public ServerLogSearchTermsDataSet GetServerLogSearchTermsInfo()
+        {
+            try
+            {
+                aServerLogSearchTermsDataSet = new ServerLogSearchTermsDataSet();
+                aServerLogSearchTermsTableAdapter = new ServerLogSearchTermsDataSetTableAdapters.serverlogsearchtermsTableAdapter();
+                aServerLogSearchTermsTableAdapter.Fill(aServerLogSearchTermsDataSet.serverlogsearchterms);
+            }
+            catch (Exception Ex)
+            {
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Get Server Log Search Terms Info " + Ex.Message);
+            }
+
+            return aServerLogSearchTermsDataSet;
+        }
+        public void UpdateServerLogSearchTermsDB(ServerLogSearchTermsDataSet aServerLogSearchTermsDataSet)
+        {
+            try
+            {
+                aServerLogSearchTermsTableAdapter = new ServerLogSearchTermsDataSetTableAdapters.serverlogsearchtermsTableAdapter();
+                aServerLogSearchTermsTableAdapter.Update(aServerLogSearchTermsDataSet.serverlogsearchterms);
+            }
+            catch (Exception Ex)
+            {
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Update Server Log Search Terms DB " + Ex.Message);
+            }
+        }
         public FindServerEventLogForReportsByDateRangeDataSet FindServerEventLogForReportsByDateRange(DateTime datStartDate, DateTime datEndDate)
         {
             try

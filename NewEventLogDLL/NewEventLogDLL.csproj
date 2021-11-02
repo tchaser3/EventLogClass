@@ -52,6 +52,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EventLogDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindActiveServerLogSearchTermsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindActiveServerLogSearchTermsDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindEventLogByDateRangeDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -117,6 +122,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindServerLogAccessByEmployeeIDDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindSortedServerLogSearchTermsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindSortedServerLogSearchTermsDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="InsertEventLogEntry.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -136,6 +146,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>InsertServerLogAccessEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertServerLogSearchTermEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertServerLogSearchTermEntry.xsd</DependentUpon>
     </Compile>
     <Compile Include="OldEventLogDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -163,6 +178,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ServerLogAccessDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ServerLogSearchTermsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ServerLogSearchTermsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateServerLogSearchTermActiveEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateServerLogSearchTermActiveEntry.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -187,6 +212,17 @@
     </None>
     <None Include="EventLogDataSet.xss">
       <DependentUpon>EventLogDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindActiveServerLogSearchTermsDataSet.xsc">
+      <DependentUpon>FindActiveServerLogSearchTermsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindActiveServerLogSearchTermsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindActiveServerLogSearchTermsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindActiveServerLogSearchTermsDataSet.xss">
+      <DependentUpon>FindActiveServerLogSearchTermsDataSet.xsd</DependentUpon>
     </None>
     <None Include="FindEventLogByDateRangeDataSet.xsc">
       <DependentUpon>FindEventLogByDateRangeDataSet.xsd</DependentUpon>
@@ -331,6 +367,17 @@
     <None Include="FindServerLogAccessByEmployeeIDDataSet.xss">
       <DependentUpon>FindServerLogAccessByEmployeeIDDataSet.xsd</DependentUpon>
     </None>
+    <None Include="FindSortedServerLogSearchTermsDataSet.xsc">
+      <DependentUpon>FindSortedServerLogSearchTermsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindSortedServerLogSearchTermsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindSortedServerLogSearchTermsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindSortedServerLogSearchTermsDataSet.xss">
+      <DependentUpon>FindSortedServerLogSearchTermsDataSet.xsd</DependentUpon>
+    </None>
     <None Include="InsertEventLogEntry.xsc">
       <DependentUpon>InsertEventLogEntry.xsd</DependentUpon>
     </None>
@@ -374,6 +421,17 @@
     </None>
     <None Include="InsertServerLogAccessEntry.xss">
       <DependentUpon>InsertServerLogAccessEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertServerLogSearchTermEntry.xsc">
+      <DependentUpon>InsertServerLogSearchTermEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertServerLogSearchTermEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertServerLogSearchTermEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertServerLogSearchTermEntry.xss">
+      <DependentUpon>InsertServerLogSearchTermEntry.xsd</DependentUpon>
     </None>
     <None Include="OldEventLogDataSet.xsc">
       <DependentUpon>OldEventLogDataSet.xsd</DependentUpon>
@@ -422,6 +480,28 @@
     </None>
     <None Include="ServerLogAccessDataSet.xss">
       <DependentUpon>ServerLogAccessDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ServerLogSearchTermsDataSet.xsc">
+      <DependentUpon>ServerLogSearchTermsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ServerLogSearchTermsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ServerLogSearchTermsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ServerLogSearchTermsDataSet.xss">
+      <DependentUpon>ServerLogSearchTermsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateServerLogSearchTermActiveEntry.xsc">
+      <DependentUpon>UpdateServerLogSearchTermActiveEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateServerLogSearchTermActiveEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateServerLogSearchTermActiveEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateServerLogSearchTermActiveEntry.xss">
+      <DependentUpon>UpdateServerLogSearchTermActiveEntry.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
