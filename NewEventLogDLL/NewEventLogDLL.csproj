@@ -122,6 +122,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindServerLogAccessByEmployeeIDDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindServerLogSearchTermDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindServerLogSearchTermDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindSortedServerLogSearchTermsDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -366,6 +371,17 @@
     </None>
     <None Include="FindServerLogAccessByEmployeeIDDataSet.xss">
       <DependentUpon>FindServerLogAccessByEmployeeIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindServerLogSearchTermDataSet.xsc">
+      <DependentUpon>FindServerLogSearchTermDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindServerLogSearchTermDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindServerLogSearchTermDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindServerLogSearchTermDataSet.xss">
+      <DependentUpon>FindServerLogSearchTermDataSet.xsd</DependentUpon>
     </None>
     <None Include="FindSortedServerLogSearchTermsDataSet.xsc">
       <DependentUpon>FindSortedServerLogSearchTermsDataSet.xsd</DependentUpon>

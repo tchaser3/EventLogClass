@@ -92,7 +92,24 @@ namespace NewEventLogDLL
         FindSortedServerLogSearchTermsDataSet aFindSortedServerLogSearchTermsDataSet;
         FindSortedServerLogSearchTermsDataSetTableAdapters.FindSortedServerLogSearchTermsTableAdapter aFindSortedServerLogSearchTermsTableAdapter;
 
+        FindServerLogSearchTermDataSet aFindServerLogSeachTermDataSet;
+        FindServerLogSearchTermDataSetTableAdapters.FindServerLogSearchTermTableAdapter aFindServerLogSearchTermTableAdapter;
 
+        public FindServerLogSearchTermDataSet FindServerLogSearchTerm(string strSearchTerm)
+        {
+            try
+            {
+                aFindServerLogSeachTermDataSet = new FindServerLogSearchTermDataSet();
+                aFindServerLogSearchTermTableAdapter = new FindServerLogSearchTermDataSetTableAdapters.FindServerLogSearchTermTableAdapter();
+                aFindServerLogSearchTermTableAdapter.Fill(aFindServerLogSeachTermDataSet.FindServerLogSearchTerm, strSearchTerm);
+            }
+            catch (Exception Ex)
+            {
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Find Server Log Search Term " + Ex.Message);
+            }
+
+            return aFindServerLogSeachTermDataSet;
+        }
         public FindSortedServerLogSearchTermsDataSet FindSortedServerLogSearchTerms()
         {
             try
