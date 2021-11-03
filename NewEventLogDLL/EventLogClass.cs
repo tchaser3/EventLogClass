@@ -92,6 +92,7 @@ namespace NewEventLogDLL
         FindSortedServerLogSearchTermsDataSet aFindSortedServerLogSearchTermsDataSet;
         FindSortedServerLogSearchTermsDataSetTableAdapters.FindSortedServerLogSearchTermsTableAdapter aFindSortedServerLogSearchTermsTableAdapter;
 
+
         public FindSortedServerLogSearchTermsDataSet FindSortedServerLogSearchTerms()
         {
             try
