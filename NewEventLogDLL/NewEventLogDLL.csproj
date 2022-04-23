@@ -62,6 +62,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindEventLogByDateRangeDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindEventLogEntriesForEmailDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindEventLogEntriesForEmailDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindServerEventLogByDateRangeDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -239,6 +244,17 @@
     </None>
     <None Include="FindEventLogByDateRangeDataSet.xss">
       <DependentUpon>FindEventLogByDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindEventLogEntriesForEmailDataSet.xsc">
+      <DependentUpon>FindEventLogEntriesForEmailDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindEventLogEntriesForEmailDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindEventLogEntriesForEmailDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindEventLogEntriesForEmailDataSet.xss">
+      <DependentUpon>FindEventLogEntriesForEmailDataSet.xsd</DependentUpon>
     </None>
     <None Include="FindServerEventLogByDateRangeDataSet.xsc">
       <DependentUpon>FindServerEventLogByDateRangeDataSet.xsd</DependentUpon>

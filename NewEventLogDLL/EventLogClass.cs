@@ -95,6 +95,24 @@ namespace NewEventLogDLL
         FindServerLogSearchTermDataSet aFindServerLogSeachTermDataSet;
         FindServerLogSearchTermDataSetTableAdapters.FindServerLogSearchTermTableAdapter aFindServerLogSearchTermTableAdapter;
 
+        FindEventLogEntriesForEmailDataSet aFindEventLogEntriesForEmailDataSet;
+        FindEventLogEntriesForEmailDataSetTableAdapters.FindEventLogEntriesForEmailTableAdapter aFindEventLogEntriesForEmailTableAdapter;
+
+        public FindEventLogEntriesForEmailDataSet FindEventLogEntriesForEmail()
+        {
+            try
+            {
+                aFindEventLogEntriesForEmailDataSet = new FindEventLogEntriesForEmailDataSet();
+                aFindEventLogEntriesForEmailTableAdapter = new FindEventLogEntriesForEmailDataSetTableAdapters.FindEventLogEntriesForEmailTableAdapter();
+                aFindEventLogEntriesForEmailTableAdapter.Fill(aFindEventLogEntriesForEmailDataSet.FindEventLogEntriesForEmail);
+            }
+            catch (Exception ex)
+            {
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Find Event Log Entries For Email " + ex.Message);
+            }
+
+            return aFindEventLogEntriesForEmailDataSet;
+        }
         public FindServerLogSearchTermDataSet FindServerLogSearchTerm(string strSearchTerm)
         {
             try
@@ -569,11 +587,10 @@ namespace NewEventLogDLL
                 aInsertEventLogTableAdapter = new InsertEventLogEntryTableAdapters.QueriesTableAdapter();
                 aInsertEventLogTableAdapter.InsertEventLogEntry(datEventDate, strEventLogEntry);
 
-
             }
-            catch (Exception)
+            catch (Exception Ex)
             {
-
+                aInsertEventLogTableAdapter.InsertEventLogEntry(datEventDate, Ex.ToString());
             }
 
             return blnFatalError;
