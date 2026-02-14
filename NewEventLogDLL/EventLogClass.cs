@@ -98,6 +98,24 @@ namespace NewEventLogDLL
         FindEventLogEntriesForEmailDataSet aFindEventLogEntriesForEmailDataSet;
         FindEventLogEntriesForEmailDataSetTableAdapters.FindEventLogEntriesForEmailTableAdapter aFindEventLogEntriesForEmailTableAdapter;
 
+        FindServerEventLogForReportsEntryDataSet findServerEventLogForReportsEntryDataSet;
+        FindServerEventLogForReportsEntryDataSetTableAdapters.FindServerEventLogForReportsEntryTableAdapter aFindServerEventLogForReportsEntryTableAdapter;
+
+        public FindServerEventLogForReportsEntryDataSet FindServerEventLogForReportsEntry()
+        {
+            try
+            {
+                findServerEventLogForReportsEntryDataSet = new FindServerEventLogForReportsEntryDataSet();
+                aFindServerEventLogForReportsEntryTableAdapter = new FindServerEventLogForReportsEntryDataSetTableAdapters.FindServerEventLogForReportsEntryTableAdapter();
+                aFindServerEventLogForReportsEntryTableAdapter.Fill(findServerEventLogForReportsEntryDataSet.FindServerEventLogForReportsEntry);
+            }
+            catch (Exception Ex)
+            {
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Find Event Log Entries For Email " + Ex.ToString());
+            }
+            return findServerEventLogForReportsEntryDataSet;
+            
+        }
         public FindEventLogEntriesForEmailDataSet FindEventLogEntriesForEmail()
         {
             try
@@ -108,7 +126,7 @@ namespace NewEventLogDLL
             }
             catch (Exception ex)
             {
-                InsertEventLogEntry(DateTime.Now, "Event Log Class // Find Event Log Entries For Email " + ex.Message);
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Find Event Log Entries For Email " + ex.ToString());
             }
 
             return aFindEventLogEntriesForEmailDataSet;
@@ -123,7 +141,7 @@ namespace NewEventLogDLL
             }
             catch (Exception Ex)
             {
-                InsertEventLogEntry(DateTime.Now, "Event Log Class // Find Server Log Search Term " + Ex.Message);
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Find Server Log Search Term " + Ex.ToString());
             }
 
             return aFindServerLogSeachTermDataSet;
@@ -138,7 +156,7 @@ namespace NewEventLogDLL
             }
             catch(Exception Ex)
             {
-                InsertEventLogEntry(DateTime.Now, "Event Log Class // Find Sorted Server Log Search Terms " + Ex.Message);
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Find Sorted Server Log Search Terms " + Ex.ToString());
             }
 
             return aFindSortedServerLogSearchTermsDataSet;
@@ -153,7 +171,7 @@ namespace NewEventLogDLL
             }
             catch (Exception ex)
             {
-                InsertEventLogEntry(DateTime.Now, "Event Log Class // Find Active Server Log Search Terms " + ex.Message);
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Find Active Server Log Search Terms " + ex.ToString());
             }
 
             return aFindActiveServerLogSearchTermsDataSet;
@@ -169,7 +187,7 @@ namespace NewEventLogDLL
             }
             catch (Exception ex)
             {
-                InsertEventLogEntry(DateTime.Now, "Event Log Class // Update Server Log Search Term Active " + ex.Message);
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Update Server Log Search Term Active " + ex.ToString());
 
                 blnFatalError = true;
             }
@@ -187,7 +205,7 @@ namespace NewEventLogDLL
             }
             catch (Exception ex)
             {
-                InsertEventLogEntry(DateTime.Now, "Event Log Class // Insert Server Log Search Term " + ex.Message);
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Insert Server Log Search Term " + ex.ToString());
 
                 blnFatalError = true;
             }
@@ -204,7 +222,7 @@ namespace NewEventLogDLL
             }
             catch (Exception Ex)
             {
-                InsertEventLogEntry(DateTime.Now, "Event Log Class // Get Server Log Search Terms Info " + Ex.Message);
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Get Server Log Search Terms Info " + Ex.ToString());
             }
 
             return aServerLogSearchTermsDataSet;
@@ -218,7 +236,7 @@ namespace NewEventLogDLL
             }
             catch (Exception Ex)
             {
-                InsertEventLogEntry(DateTime.Now, "Event Log Class // Update Server Log Search Terms DB " + Ex.Message);
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Update Server Log Search Terms DB " + Ex.ToString());
             }
         }
         public FindServerEventLogForReportsByDateRangeDataSet FindServerEventLogForReportsByDateRange(DateTime datStartDate, DateTime datEndDate)
@@ -231,7 +249,7 @@ namespace NewEventLogDLL
             }
             catch (Exception Ex)
             {
-                InsertEventLogEntry(DateTime.Now, "Event Log Class // Find Server Event Log For Reports By Date Range " + Ex.Message);
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Find Server Event Log For Reports By Date Range " + Ex.ToString());
             }
 
             return aFindServerEventLogForReportsByDateRangeDataSet;
@@ -246,7 +264,7 @@ namespace NewEventLogDLL
             }
             catch (Exception Ex)
             {
-                InsertEventLogEntry(DateTime.Now, "Event Log Class // Find Server Event Log For Reports By Item " + Ex.Message);
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Find Server Event Log For Reports By Item " + Ex.ToString());
             }
 
             return aFindServerEventLogForReportsByItemDataSet;
@@ -261,7 +279,7 @@ namespace NewEventLogDLL
             }
             catch (Exception Ex)
             {
-                InsertEventLogEntry(DateTime.Now, "Event Log Class // Find Server Event Log For Reports By User " + Ex.Message);
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Find Server Event Log For Reports By User " + Ex.ToString());
             }
 
             return aFindServerEventLogForReportsByUserDataSet;
@@ -276,7 +294,7 @@ namespace NewEventLogDLL
             }
             catch (Exception Ex)
             {
-                InsertEventLogEntry(DateTime.Now, "Event Log Class // Find Server Eventlog For Reports Verification " + Ex.Message);
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Find Server Eventlog For Reports Verification " + Ex.ToString());
             }
 
             return aFindServerEventLogForReportsVerificationDataSet;
@@ -292,7 +310,7 @@ namespace NewEventLogDLL
             }
             catch (Exception Ex)
             {
-                InsertEventLogEntry(DateTime.Now, "Event Log Class // Insert Server Event Log For Reports " + Ex.Message);
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Insert Server Event Log For Reports " + Ex.ToString());
 
                 blnFatalError = true;
             }
@@ -309,7 +327,7 @@ namespace NewEventLogDLL
             }
             catch (Exception ex)
             {
-                InsertEventLogEntry(DateTime.Now, "Event Log Class // Get Server Event Log For Reports DB " + ex.Message);
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Get Server Event Log For Reports DB " + ex.ToString());
             }
 
             return aServerEventLogForReportsDataSet;
@@ -323,7 +341,7 @@ namespace NewEventLogDLL
             }
             catch (Exception ex)
             {
-                InsertEventLogEntry(DateTime.Now, "Event Log Class // Update Server Event Log For Reports DB " + ex.Message);
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Update Server Event Log For Reports DB " + ex.ToString());
             }
         }
 
@@ -337,7 +355,7 @@ namespace NewEventLogDLL
             }
             catch (Exception ex)
             {
-                InsertEventLogEntry(DateTime.Now, "Event Log Class // Find Server Event Log by Date Range " + ex.Message);
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Find Server Event Log by Date Range " + ex.ToString());
             }
 
             return aFindServerEventLogByDateRangeDataSet;
@@ -352,7 +370,7 @@ namespace NewEventLogDLL
             }
             catch (Exception Ex)
             {
-                InsertEventLogEntry(DateTime.Now, "Event Log Class // Find Server Event Log Security Access by Keyword " + Ex.Message);
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Find Server Event Log Security Access by Keyword " + Ex.ToString());
             }
 
             return aFindServerEventLogSecurityAccessByKeywordDataSet;
@@ -367,7 +385,7 @@ namespace NewEventLogDLL
             }
             catch (Exception Ex)
             {
-                InsertEventLogEntry(DateTime.Now, "Event Log Class // Find Server Event Log Security Access " + Ex.Message);
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Find Server Event Log Security Access " + Ex.ToString());
             }
 
             return aFindServerEventLogSecurityAccessDataSet;
@@ -382,7 +400,7 @@ namespace NewEventLogDLL
             }
             catch (Exception Ex)
             {
-                InsertEventLogEntry(DateTime.Now, "Event Log Class // Find Server Event Log Content Match " + Ex.Message);
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Find Server Event Log Content Match " + Ex.ToString());
             }
 
             return aFindServerEventLogContentMatchDataSet;
@@ -398,7 +416,7 @@ namespace NewEventLogDLL
             }
             catch (Exception Ex)
             {
-                InsertEventLogEntry(DateTime.Now, "Event Log Class // Deactive Employee Server Log Access Entry " + Ex.Message);
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Deactive Employee Server Log Access Entry " + Ex.ToString());
 
                 blnFatalError = true;
             }
@@ -415,7 +433,7 @@ namespace NewEventLogDLL
             }
             catch (Exception Ex)
             {
-                InsertEventLogEntry(DateTime.Now, "Event Log Class // Find Server Log Access By Employee ID " + Ex.Message);
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Find Server Log Access By Employee ID " + Ex.ToString());
             }
 
             return aFindServerLogAccessByEmployeeIDDataSet;
@@ -431,7 +449,7 @@ namespace NewEventLogDLL
             }
             catch (Exception Ex)
             {
-                InsertEventLogEntry(DateTime.Now, "Event Log Class // Insert Server Log Access " + Ex.Message);
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Insert Server Log Access " + Ex.ToString());
 
                 blnFatalError = true;
             }
@@ -448,7 +466,7 @@ namespace NewEventLogDLL
             }
             catch (Exception Ex)
             {
-                InsertEventLogEntry(DateTime.Now, "Event Log Class // Find Server Event Log Max Date " + Ex.Message);
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Find Server Event Log Max Date " + Ex.ToString());
             }
 
             return aFindServerEventLogMaxDateDataSet;
@@ -463,7 +481,7 @@ namespace NewEventLogDLL
             }
             catch (Exception Ex)
             {
-                InsertEventLogEntry(DateTime.Now, "Event Log Class // Get Server Log Access Info " + Ex.Message);
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Get Server Log Access Info " + Ex.ToString());
             }
 
             return aServerLogAccessDataSet;
@@ -477,7 +495,7 @@ namespace NewEventLogDLL
             }
             catch (Exception Ex)
             {
-                InsertEventLogEntry(DateTime.Now, "Event Log Class // Get Server Log Access Info " + Ex.Message);
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Get Server Log Access Info " + Ex.ToString());
             }
         }
         public FindServerEventLogByNoteKeywordDataSet FindServerEventLogByNoteKeyword(string strNoteKeyword, DateTime datStartDate, DateTime datEndDate)
@@ -490,7 +508,7 @@ namespace NewEventLogDLL
             }
             catch (Exception Ex)
             {
-                InsertEventLogEntry(DateTime.Now, "Event Log Class // Find Server Event Log By Note Keyword " + Ex.Message);
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Find Server Event Log By Note Keyword " + Ex.ToString());
             }
 
             return aFindServerEventLogByNoteKeywordDataSet;
@@ -505,7 +523,7 @@ namespace NewEventLogDLL
             }
             catch (Exception Ex)
             {
-                InsertEventLogEntry(DateTime.Now, "Event Log Class // Find Server Event Log By Transaction Date " + Ex.Message);
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Find Server Event Log By Transaction Date " + Ex.ToString());
             }
 
             return aFindServerEventLogByTransactionDateDataSet;
@@ -521,7 +539,7 @@ namespace NewEventLogDLL
             }
             catch (Exception Ex)
             {
-                InsertEventLogEntry(DateTime.Now, "Event Log Class // inserst Server Event Log " + Ex.Message);
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // inserst Server Event Log " + Ex.ToString());
 
                 blnFatalError = true;
             }
@@ -538,7 +556,7 @@ namespace NewEventLogDLL
             }
             catch (Exception Ex)
             {
-                InsertEventLogEntry(DateTime.Now, "Event Log Class // Get Server Event Log Info " + Ex.Message);
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Get Server Event Log Info " + Ex.ToString());
             }
 
             return aServerEventLogDataSet;
@@ -552,7 +570,7 @@ namespace NewEventLogDLL
             }
             catch (Exception Ex)
             {
-                InsertEventLogEntry(DateTime.Now, "Event Log Class // Update Server Event Log DB " + Ex.Message);
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Update Server Event Log DB " + Ex.ToString());
             }
         }
         public FindEventLogByDateRangeDataSet FindEventLogByDateRange(DateTime datStartDate, DateTime datEndDate)
