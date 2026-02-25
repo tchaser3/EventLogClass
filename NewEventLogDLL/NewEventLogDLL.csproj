@@ -107,6 +107,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindServerEventLogForReportsEntryDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindServerEventLogForReportsSpecificDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindServerEventLogForReportsSpecificDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindServerEventLogForReportsVerificationDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -348,6 +353,17 @@
     </None>
     <None Include="FindServerEventLogForReportsEntryDataSet.xss">
       <DependentUpon>FindServerEventLogForReportsEntryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindServerEventLogForReportsSpecificDataSet.xsc">
+      <DependentUpon>FindServerEventLogForReportsSpecificDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindServerEventLogForReportsSpecificDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindServerEventLogForReportsSpecificDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindServerEventLogForReportsSpecificDataSet.xss">
+      <DependentUpon>FindServerEventLogForReportsSpecificDataSet.xsd</DependentUpon>
     </None>
     <None Include="FindServerEventLogForReportsVerificationDataSet.xsc">
       <DependentUpon>FindServerEventLogForReportsVerificationDataSet.xsd</DependentUpon>

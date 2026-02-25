@@ -101,6 +101,23 @@ namespace NewEventLogDLL
         FindServerEventLogForReportsEntryDataSet findServerEventLogForReportsEntryDataSet;
         FindServerEventLogForReportsEntryDataSetTableAdapters.FindServerEventLogForReportsEntryTableAdapter aFindServerEventLogForReportsEntryTableAdapter;
 
+        FindServerEventLogForReportsSpecificDataSet aFindServerEventLogForReportsSpecificDataSet;
+        FindServerEventLogForReportsSpecificDataSetTableAdapters.FindServerEventLogForReportsSpecificTableAdapter aFindServerEventLogForReportsSpecificTableAdapter;
+
+        public FindServerEventLogForReportsSpecificDataSet FindServerEventLogForReportsSpecific(DateTime datTransactionDate, string strUserName, string strItemAccessed)
+        {
+            try
+            {
+                aFindServerEventLogForReportsSpecificDataSet = new FindServerEventLogForReportsSpecificDataSet();
+                aFindServerEventLogForReportsSpecificTableAdapter = new FindServerEventLogForReportsSpecificDataSetTableAdapters.FindServerEventLogForReportsSpecificTableAdapter();
+                aFindServerEventLogForReportsSpecificTableAdapter.Fill(aFindServerEventLogForReportsSpecificDataSet.FindServerEventLogForReportsSpecific, datTransactionDate, strUserName, strItemAccessed);
+            }
+            catch (Exception Ex)
+            {
+                InsertEventLogEntry(DateTime.Now, "Event Log Class // Find Server Event Log For Reports Specific " + Ex.ToString());
+            }
+            return aFindServerEventLogForReportsSpecificDataSet;
+        }
         public FindServerEventLogForReportsEntryDataSet FindServerEventLogForReportsEntry()
         {
             try
